@@ -99,8 +99,14 @@ class Recipe:
             return True
         return False
 
-    def display_allergens(self):
+    def display_allergens(self, additional_allergens=None):
         common_allergens = {"wheat", "shellfish", "peanuts", "eggs"}
+
+        if additional_allergens is not None:
+            common_allergens = common_allergens.union(set(additional_allergens))
+
+        set_common_allergens = set(common_allergens)
+        print(f'Contained allergens: {", ".join(set_common_allergens.intersection(self.ingredients))}')
 
     def print_recipe(self):
         print(f"{self.name.title()}")
@@ -108,6 +114,7 @@ class Recipe:
         print(f"List of ingredients: {', '.join(self.ingredients)}")
         if self.instructions != "":
             print(f"\nInstructions:\n{self.instructions}")
+
 
 simple_cake = ['flour', 'sugar', 'butter', 'eggs', 'baking powder', 'milk']
 instructions = "Preheat oven to 180 degrees..."
