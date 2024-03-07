@@ -1,0 +1,7 @@
+Language: Albanian Genus: Albanian Word Order: SVO
+Language: Catalan Genus: Romance Word Order: SVO
+Language: English Genus: Germanic Word Order: SVO
+Language: Hindi Genus: Indic Word Order: SOV
+Language: Irish Genus: Celtic Word Order: VSO
+Language: Macedonian Genus: Slavic Word Order: SVO
+Language: Persian Genus: Iranian Word Order: SOV

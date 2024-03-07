@@ -103,10 +103,10 @@ class Recipe:
         common_allergens = {"wheat", "shellfish", "peanuts", "eggs"}
 
         if additional_allergens is not None:
-            common_allergens = common_allergens.union(set(additional_allergens))
+            common_allergens.add(additional_allergens)
 
-        set_common_allergens = set(common_allergens)
-        print(f'Contained allergens: {", ".join(set_common_allergens.intersection(self.ingredients))}')
+        print(common_allergens.intersection(self.ingredients))
+
 
     def print_recipe(self):
         print(f"{self.name.title()}")
